@@ -6,11 +6,12 @@ Si = imag(S);
 N = length(Sk);
 
 %% Plotting of histograms Gaussian
+% pdf_normal = pdf('Normal', 
 % figure(1)
-% histogram(Sr)
+% histogram(Sr, 'Normalization', 'pdf')
 % title('Histogram of S_r')
 % figure(2)
-% histogram(Si)
+% histogram(Si, 'Normalization', 'pdf')
 % title('Histogram of S_i')
 
 %% 

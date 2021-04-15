@@ -19,20 +19,23 @@ for i = 1:N
     chi_square_H0(i) = 2*abs(data_H0(i))^2/sigma_w_sq;
     chi_square_H1(i) = 2*abs(data_H1(i))^2/(sigma_s_sq + sigma_w_sq);
 end
+
 x = linspace(0,14);
 pdf_chi_sq = pdf('Chisquare',x, 2); 
 
 figure(1)
 h = histogram(chi_square_H0, 'Normalization', 'pdf'); hold on;
 plot(x, pdf_chi_sq); hold off;
-title('Histogram of chi-squared random variable H0 vs. real pdf')
+legend({'H0', 'Real chi-square pdf'}, 'FontSize', 12)
+title('Histogram of H0 compared to the real pdf')
 
 %q = integral(@(x)pdf_H0(x),0,Inf)
 
 figure(2)
 histogram(chi_square_H1, 'Normalization', 'pdf'); hold on;
 plot(x, pdf_chi_sq); hold off;
-title('Histogram of chi-squared random variable H1 vs. real pdf')
+legend({'H1', 'Real chi-square pdf'}, 'FontSize', 12)
+title('Histogram of H1 compared to the real pdf')
 
 
 
