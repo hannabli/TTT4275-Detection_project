@@ -1,5 +1,5 @@
 clear all;
-Sk = importdata('T1_data_Sk_Gaussian.mat');
+Sk = importdata('data/T1_data_Sk_Gaussian.mat');
 S = ifft(Sk);
 Sr = real(S);
 Si = imag(S);
@@ -15,7 +15,7 @@ N = length(Sk);
 % title('Histogram of S_i')
 
 %% 
-Sbk = importdata('T1_data_Sk_BPSK.mat');
+Sbk = importdata('data/T1_data_Sk_BPSK.mat');
 Sb = ifft(Sbk);
 Sbr = real(Sb);
 Sbi = imag(Sb);

@@ -1,7 +1,7 @@
-data_H0 = importdata('T3_data_x_H0.mat');
-data_H1 = importdata('T3_data_x_H1.mat');
-data_sigma_s = importdata('T3_data_sigma_s.mat');
-data_sigma_w = importdata('T3_data_sigma_w.mat');
+data_H0 = importdata('data/T3_data_x_H0.mat');
+data_H1 = importdata('data/T3_data_x_H1.mat');
+data_sigma_s = importdata('data/T3_data_sigma_s.mat');
+data_sigma_w = importdata('data/T3_data_sigma_w.mat');
 
 N = length(data_sigma_s);
 
