@@ -29,8 +29,6 @@ plot(x, pdf_chi_sq); hold off;
 legend({'H0', 'Real chi-square pdf'}, 'FontSize', 12)
 title('Histogram of H0 compared to the real pdf')
 
-%q = integral(@(x)pdf_H0(x),0,Inf)
-
 figure(2)
 histogram(chi_square_H1, 'Normalization', 'pdf'); hold on;
 plot(x, pdf_chi_sq); hold off;

@@ -1,22 +1,17 @@
 
 
 lambda = 0:0.1:3000;
-K = 1024;
-P_FA = 1 - gamcdf(lambda, K, sigma_w_sq);
-P_D = 1 - gamcdf(lambda, K, sigma_w_sq + sigma_s_sq);
+K = [1,10,100,1000];
 
-figure(1)
-plot(P_FA,P_D)
-xlabel('P_{FA}'); ylabel('P_{D}');
-legend('K = 1024')
-title('ROC')
+for i=1:length(K)
+    P_FA = 1 - gamcdf(lambda, K(i), sigma_w_sq);
+    P_D = 1 - gamcdf(lambda, K(i), sigma_w_sq + sigma_s_sq);
+    plot(P_FA,P_D)
+    hold on
+    title('ROC')
+end
 
-
-
-
-% function p_D = P_D(sigma_s_sq, sigma_w_sq, alpha)
-%     p_D = exp((sigma_w_sq*log(alpha)/(sigma_s_sq + sigma_w_sq)));
-% end
-% For 2 frihetsgrader. 
+legend('K=1','K=10','K=100','K=1000')
+xlabel('P_{FA}'); ylabel('P_{D}')
 
 
