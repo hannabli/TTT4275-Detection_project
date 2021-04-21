@@ -6,7 +6,7 @@ K = [1,10,100,1000];
 for i=1:length(K)
     P_FA = 1 - gamcdf(lambda, K(i), sigma_w_sq);
     P_D = 1 - gamcdf(lambda, K(i), sigma_w_sq + sigma_s_sq);
-    plot(P_FA,P_D)
+    plot(P_FA,P_D, 'LineWidth',1.2)
     hold on
     title('ROC')
 end
